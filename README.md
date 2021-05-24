@@ -25,7 +25,7 @@ La aplicación utilizada en esta guía la puede encontrar en este repositorio. P
 ```
 git clone https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo
 ```
-4. Verifique dentro de su carpeta que se encuentran descargados los archivos de la aplicación que se muestran en el repositorio. Debe encontrar dos carpetas: 
+4. Verifique dentro de su carpeta que se encuentran descargados los archivos de la aplicación que se muestran en el repositorio. Debe encontrar dos carpetas: MongoDB-Privado y MongoDB-Publico.
 
 
 ## Ejercicio 2
