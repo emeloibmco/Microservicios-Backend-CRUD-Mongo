@@ -11,10 +11,10 @@
 ## Ejercicio 1
 ### Despliegue Backend CRUD MongoDB público 🔓
 ### Indice 📜
-1. [Editar Backend de la aplicación con credenciales de servicio MongoDB público ✏](#Editar-Backend-de-la-aplicación-con-credenciales-de-servicio-MongoDB-público-✏)
+1. [Editar Backend de la aplicación con credenciales de servicio MongoDB público ✏](#Editar-Backend-de-la-aplicación-con-credenciales-de-servicio-MongoDB-público)
 
 ## Paso 1.
-### Editar Backend de la aplicación con credenciales de servicio MongoDB público ✏
+### Editar Backend de la aplicación con credenciales de servicio MongoDB público
 
 
 
