@@ -7,13 +7,13 @@ const MongoStore = require('connect-mongo')(session);
 
 // user set constiables
 // user set constiables
-const mongoHost1 = process.env.MONGO_HOST1 || '34dcc78c-0c59-47f9-a599-5bd0db303d07-0.budepemd0im5pmu4u60g.private.databases.appdomain.cloud';
-const mongoHost2 = process.env.MONGO_HOST2 || '34dcc78c-0c59-47f9-a599-5bd0db303d07-1.budepemd0im5pmu4u60g.private.databases.appdomain.cloud';
-const mongoHost3 = process.env.MONGO_HOST3 || '34dcc78c-0c59-47f9-a599-5bd0db303d07-2.budepemd0im5pmu4u60g.private.databases.appdomain.cloud';
-const mongoUser = process.env.MONGO_USER || 'ibm_cloud_f8e4cbb9_de31_403c_aad0_dbe0fc07431e';
-const mongoPass = process.env.MONGO_PASS || '3cf5ec486a8b80c85f7cdf0688ae011cde91d8230ddc4dd097380254a0ca89d1';
-const mongoDBName = process.env.MONGO_DB_NAME || 'ibmclouddb';
-const mongoSSL = process.env.MONGO_SSL || '--sslCAFile 7cf7953e-9946-4392-9e1b-b577d67d9005';
+const mongoHost1 = process.env.MONGO_HOST1 || '';
+const mongoHost2 = process.env.MONGO_HOST2 || '';
+const mongoHost3 = process.env.MONGO_HOST3 || '';
+const mongoUser = process.env.MONGO_USER || '';
+const mongoPass = process.env.MONGO_PASS || '';
+const mongoDBName = process.env.MONGO_DB_NAME || '';
+const mongoSSL = process.env.MONGO_SSL || '';
 
 
 module.exports = function(app){
@@ -28,7 +28,7 @@ module.exports = function(app){
 		next();
 	  });
 	
-	var ca = [require('fs').readFileSync(__dirname + "/7cf7953e-9946-4392-9e1b-b577d67d9005")];
+	var ca = [require('fs').readFileSync(__dirname + "/")];
 	
 	const options = {
 		useNewUrlParser: true,
