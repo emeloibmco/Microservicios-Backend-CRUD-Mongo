@@ -8,7 +8,12 @@
 4. [Ejercicio 3. Despliegue Backend CRUD MongoDB privado](#Ejercicio-3)
 
 ## Pre-requisitos :pencil:
-* 
+* Tener instalado *Git* en su computador, para clonar el respositorio.
+* Tener instalada la CLI de *Docker*.
+* Tener instalado *Docker Desktop* para verificar la creación de su imagen.
+* Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
+* Implementar de forma previa un servicio "Databases for MongoDB".
+* Contar con un clúster en Kubernetes.
 
 ## Ejercicio 1
 ### Clonar Repositorio 🗂
