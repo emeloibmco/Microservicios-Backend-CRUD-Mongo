@@ -4,7 +4,7 @@
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Paso 1. Despliegue Backend CRUD MongoDB público](#Paso-1)
-* [Crear imagen](#Crear-imagen)
+a.      [Crear imagen](#Crear-imagen)
 4. [Paso 2. Crear archivo Dockerfile](#Paso-2)
 5. [Paso 3. Crear imagen de la aplicación en Docker](#Paso-3)
 6. [Paso 4. Subir imagen a IBM Cloud Container Registry](#Paso-4)
