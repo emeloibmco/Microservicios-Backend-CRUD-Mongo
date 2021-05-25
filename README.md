@@ -33,6 +33,8 @@ git clone https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo
 
 ## Paso 2. 
 ### Editar Backend de la aplicación con credenciales de servicio MongoDB público 🔓 o privado 🔒
+Para que el Backend de su aplicación funcione correctamente debe agregar las respectivas credenciales del servicio *Databases for MongoDB* en el código. Por esto, siga los pasos que se muestran a continuación:
+1. 
 
 ## Paso 3. 
 ### Crear imagen del Backend 📱
