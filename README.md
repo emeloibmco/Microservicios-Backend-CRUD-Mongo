@@ -8,6 +8,7 @@
 4. [Paso 3. Crear imagen del Backend](#Paso-3)
 5. [Paso 4. Subir imagen del Backend a IBM Cloud Container Registry](#Paso-4)
 6. [Paso 5. Desplegar imagen del Backend en Kubernetes](#Paso-5)
+7. [Paso 6. Prueba de Funcionamiento](#Paso-6)
 
 ## Pre-requisitos :pencil:
 * Tener instalado *Git* en su computador, para clonar el respositorio.
@@ -129,16 +130,20 @@ ibmcloud cr namespace-add <namespace>
 ```
 docker tag <nombre_imagen:tag> us.icr.io/<namespace>/<nombre_imagen:tag>
 ```
->**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su proyecto y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
+>**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
 
 7. Envíe la imagen a *IBM Cloud Container Registry* mediante el comando:
 ```
 docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 ```
 
+8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
+
 
 ## Paso 5.
-### Desplegar imagen del Backend en Kubernetes 🏆
+### Desplegar imagen del Backend en Kubernetes🚀
 
 
+## Paso 6.
+### Prueba de Funcionamiento 🏆
 
