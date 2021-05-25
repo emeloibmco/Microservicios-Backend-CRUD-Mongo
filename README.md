@@ -37,6 +37,8 @@ Para que el Backend de su aplicación funcione correctamente debe agregar las re
 1. Ingrese al servicio *Databases for MongoDB* creado. Recuerde que puede ser público o privado.
 2. De click en la pestaña *Overview*, vaya a la parte inferior en donde se encuentran los endpoints y en la opción *Quick Start* descargue el certificado TLS.
 
+3. De click en la pestaña *Credenciales de Servicio*
+
 
 
 
