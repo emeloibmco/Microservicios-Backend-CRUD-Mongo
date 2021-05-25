@@ -68,8 +68,13 @@ const mongoDBName = process.env.MONGO_DB_NAME || 'Valor_Database';
 var ca = [require('fs').readFileSync(__dirname + "/nombre_certificado_TLS")];
 ```
 
-8. Guarde los cambios realizados al backend de la aplicación. Si desea probar el código abra una ventana de *Windows PowerShell*, vaya a la carpeta que contiene el archivo *package.json* y ejecute el comando *npm run start*. Posteriormente en el navegador escriba: **localhost:8080/api/customers**.
+8. Guarde los cambios realizados al backend de la aplicación. Si desea probar el código abra una ventana de *Windows PowerShell*, vaya a la carpeta que contiene el archivo *package.json* y ejecute el comando *npm run start*. Posteriormente en el navegador escriba:
+```
+localhost:8080/api/customers
+```
+
 > Nota 1: esta prueba funciona si trabaja con credenciales de MongoDB público. En caso de trabajar con credenciales de MongoDB privado va a obtener un error por fallas en tiempos de conexión, aún así, esto no afectará el funcionamiento del backend en Kubernetes.
+
 > Nota 2: En caso de no colocar en la URL **/api/customers**, como respuesta va a obtener en el navegador: **CANNOT GET /**, de lo contrario debería observar como respuesta **[]**.
 
 
@@ -87,7 +92,10 @@ docker build -t <nombre_imagen:tag> .
 ```
 docker run --publish port:port_dockerfile <nombre_imagen:tag>
 ```
-y coloque en el navegador: **localhost:port/api/customers**.
+y coloque en el navegador
+```
+localhost:port/api/customers**
+```
 
 
 ## Paso 4. 
