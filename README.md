@@ -43,14 +43,25 @@ Para que el Backend de su aplicación funcione correctamente debe agregar las re
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Credenciales.gif"></p>
 
 4. Despliegue las credenciales del servicio creadas, visualice y copie los valores que aparecen en las siguientes variables:
-* USSERNAME (-u).
+* USERNAME (-u).
 * PASSWORD (-p).
-* Hostname (son 3 direcciones).
+* Hostname (son 3 direcciones distintas).
 * Port.
 * Database.
 
 > Nota: Las variables Hostname, Port y Database también las puede encontrar en la pestaña *Overview*, parte inferior en la opción *MongoDB*.
 
+5. Abra el código del Backend en su computador e ingrese a la siguiente ruta: server/conection. En esta ubicación debe encontrar el archivo *mongo.js*. Junto a este archivo agregue el certificado TLS descargado en el ítem 1.
+
+6. Abra el archivo *mongo.js* y complete los siguientes campos con los datos de las variables del ítem 4 dentro de las comillas:
+```
+const mongoHost1 = process.env.MONGO_HOST1 || 'Valor_Hostname1';
+const mongoHost2 = process.env.MONGO_HOST2 || 'Valor_Hostname2';
+const mongoHost3 = process.env.MONGO_HOST3 || 'Valor_Hostname3';
+const mongoUser = process.env.MONGO_USER || 'Valor_Username';
+const mongoPass = process.env.MONGO_PASS || 'Valor_Passwrod';
+const mongoDBName = process.env.MONGO_DB_NAME || 'Valor_Database';
+```
 
 ## Paso 3. 
 ### Crear imagen del Backend 📱
