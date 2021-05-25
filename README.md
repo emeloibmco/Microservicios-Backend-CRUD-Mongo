@@ -35,13 +35,19 @@ git clone https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo
 ### Editar Backend de la aplicación con credenciales de servicio MongoDB público 🔓 o privado 🔒
 Para que el Backend de su aplicación funcione correctamente debe agregar las respectivas credenciales del servicio *Databases for MongoDB* en el código. Por esto, siga los pasos que se muestran a continuación:
 1. Ingrese al servicio *Databases for MongoDB* creado. Recuerde que puede ser público o privado.
-2. De click en la pestaña *Overview*, vaya a la parte inferior en donde se encuentran los endpoints y en la opción *Quick Start* descargue el certificado TLS.
+
+3. De click en la pestaña *Overview*, vaya a la parte inferior en donde se encuentran los endpoints y en la opción *Quick Start* descargue el certificado TLS.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Certificado-TLS.gif"></p>
 
-3. De click en la pestaña *Credenciales de Servicio* y verifique que exista un conjunto de credenciales. Despliegue el conjunto y guarde los valores de Username, Password, 
+3. De click en la pestaña *Credenciales de Servicio* y verifique que exista un conjunto de credenciales. En caso de que no se visualice información al respecto, de click en la opción *Nueva Credencial*.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Credenciales.gif"></p>
 
-
+4. Diríjase nuevamente a la pestaña *Overview* y vaya a la parte inferior. De click en la pestaña MongoDB, visualice y copie los siguientes valores:
+* USSERNAME (-u).
+* PASSWORD (-p).
+* 
+* 
+>> Nota: Estas variables también las puede observar al despliegar el conjunto de credenciales.
 
 
 ## Paso 3. 
