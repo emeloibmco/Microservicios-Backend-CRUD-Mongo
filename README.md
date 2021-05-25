@@ -42,12 +42,14 @@ Para que el Backend de su aplicación funcione correctamente debe agregar las re
 3. De click en la pestaña *Credenciales de Servicio* y verifique que exista un conjunto de credenciales. En caso de que no se visualice información al respecto, de click en la opción *Nueva Credencial*.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Credenciales.gif"></p>
 
-4. Diríjase nuevamente a la pestaña *Overview* y vaya a la parte inferior. De click en la pestaña MongoDB, visualice y copie los siguientes valores:
+4. Despliegue las credenciales del servicio creadas, visualice y copie los valores que aparecen en las siguientes variables:
 * USSERNAME (-u).
 * PASSWORD (-p).
-* 
-* 
->> Nota: Estas variables también las puede observar al despliegar el conjunto de credenciales.
+* Hostname (son 3 direcciones).
+* Port.
+* Database.
+
+> Nota: Las variables Hostname, Port y Database también las puede encontrar en la pestaña *Overview*, parte inferior en la opción *MongoDB*.
 
 
 ## Paso 3. 
