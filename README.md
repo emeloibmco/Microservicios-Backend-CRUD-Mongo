@@ -126,7 +126,7 @@ ibmcloud cr namespace-add <namespace>
 ```
 >**Nota**: Reemplace \<namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación. 
 
-6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*). Coloque el siguiente comando:
+6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*) creado en el ítem anterior. Coloque el siguiente comando:
 ```
 docker tag <nombre_imagen:tag> us.icr.io/<namespace>/<nombre_imagen:tag>
 ```
@@ -142,6 +142,35 @@ docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 
 ## Paso 5.
 ### Desplegar imagen del Backend en Kubernetes🚀
+Para desplegar la imagen del backend de la aplicación de Kubernetes, realice lo siguiente:
+1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
+```
+ibmcloud cs clusters
+```
+
+2. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando kubectl de la siguiente manera:
+```
+ibmcloud ks cluster config –cluster <cluster_name>
+```
+
+3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar <deployment> con un nombre para su servicio de despliegue):  
+```
+kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
+```
+  
+4. Por último debe exponer su servicio en Kubernetes, para ello realice lo siguiente.
+>**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
+
+```
+kubectl expose deployment/<deployment> --type=NodePort --port=8080 -n <namespace>
+```
+
+>**NOTA 2**: Si esta trabajando con VPC (Load Balancer) ejecute el siguiente comando:
+```
+kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080 -n <namespace>
+```
+En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido e el Dockerfile de la aplicación.
+
 
 
 ## Paso 6.
