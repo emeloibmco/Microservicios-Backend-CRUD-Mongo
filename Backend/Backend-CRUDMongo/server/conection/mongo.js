@@ -13,7 +13,6 @@ const mongoHost3 = process.env.MONGO_HOST3 || '';
 const mongoUser = process.env.MONGO_USER || '';
 const mongoPass = process.env.MONGO_PASS || '';
 const mongoDBName = process.env.MONGO_DB_NAME || '';
-const mongoSSL = process.env.MONGO_SSL || '';
 
 
 module.exports = function(app){
