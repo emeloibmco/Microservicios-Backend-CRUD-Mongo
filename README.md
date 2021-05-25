@@ -85,7 +85,7 @@ docker build -t <nombre_imagen:tag> .
 
 3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y nombre_imagen:tag):
 ```
-docker run –publish port:port_dockerfile <nombre_imagen:tag>
+docker run --publish port:port_dockerfile <nombre_imagen:tag>
 ```
 y coloque en el navegador: **localhost:port/api/customers**.
 
