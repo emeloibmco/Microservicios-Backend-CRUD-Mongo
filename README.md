@@ -68,12 +68,27 @@ const mongoDBName = process.env.MONGO_DB_NAME || 'Valor_Database';
 var ca = [require('fs').readFileSync(__dirname + "/nombre_certificado_TLS")];
 ```
 
-8. Guarde los cambios realizados al backend de la aplicación. Si desea probar el código abra una ventana de *Windows PowerShell*, vaya a la carpeta que contiene el archivo *package.json* y ejecute el comando *npm run start*. 
-> Nota: esta prueba funciona si trabaja con credenciales de MongoDB público. En caso de trabajar con credenciales de MongoDB privado va a obtener un error por fallas en tiempos de conexión, aún así, esto no afectará el funcionamiento de backend en Kubernetes.
+8. Guarde los cambios realizados al backend de la aplicación. Si desea probar el código abra una ventana de *Windows PowerShell*, vaya a la carpeta que contiene el archivo *package.json* y ejecute el comando *npm run start*. Posteriormente en el navegador escriba: **localhost:8080/api/customers**.
+> Nota 1: esta prueba funciona si trabaja con credenciales de MongoDB público. En caso de trabajar con credenciales de MongoDB privado va a obtener un error por fallas en tiempos de conexión, aún así, esto no afectará el funcionamiento del backend en Kubernetes.
+> Nota 2: En caso de no colocar en la URL **/api/customers**, como respuesta va a obtener en el navegador: **CANNOT GET /**, de lo contrario debería observar como respuesta **[]**.
 
 
 ## Paso 3. 
 ### Crear imagen del Backend 📱
+Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile* utilizado para crear la imagen de la aplicación. Realice los siguientes pasos:
+1. En la ventaja de *Windows PowerShell* y asegurándose que se encuentra dentro de la carpeta que contiene los archivos de la aplicación y el Dockerfile, coloque el siguiente comando para crear la imagen de su aplicación:
+```
+docker build -t <nombre_imagen:tag> .
+```
+
+2. Una vez finalice el proceso, verifique en *Docker Desktop* que la imagen que acaba de crear aparece en la lista de imágenes.
+
+3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y nombre_imagen:tag):
+```
+docker run –publish port:port_dockerfile <nombre_imagen:tag>
+```
+y coloque en el navegador: **localhost:port/api/customers**.
+
 
 ## Paso 4. 
 ### Subir imagen del Backend a IBM Cloud Container Registry 📤
