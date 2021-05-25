@@ -94,12 +94,48 @@ docker run --publish port:port_dockerfile <nombre_imagen:tag>
 ```
 y coloque en el navegador
 ```
-localhost:port/api/customers**
+localhost:port/api/customers
 ```
 
 
 ## Paso 4. 
 ### Subir imagen del Backend a IBM Cloud Container Registry 📤
+Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
+1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos, inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+```
+ibmcloud login --sso
+```
+
+2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+
+3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
+```
+ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
+```
+>**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información.
+
+4. Registre el daemon de Docker local en *IBM Cloud Container Registry* con el comando:
+```
+ibmcloud cr login
+```
+
+5. Cree un espacio de nombres (*namespace*) dentro de *IBM Cloud Container Registry* para su imagen. Para ello ejecute el siguiente comando:
+```
+ibmcloud cr namespace-add <namespace>
+```
+>**Nota**: Reemplace \<namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación. 
+
+6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*). Coloque el siguiente comando:
+```
+docker tag <nombre_imagen:tag> us.icr.io/<namespace>/<nombre_imagen:tag>
+```
+>**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su proyecto y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
+
+7. Envíe la imagen a *IBM Cloud Container Registry* mediante el comando:
+```
+docker push us.icr.io/<namespace>/<nombre_imagen:tag>
+```
+
 
 ## Paso 5.
 ### Desplegar imagen del Backend en Kubernetes 🏆
