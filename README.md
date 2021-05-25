@@ -33,7 +33,7 @@ git clone https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo
 
 ## Paso 2. 
 ### Editar Backend de la aplicación con credenciales de servicio MongoDB público 🔓 o privado 🔒
-Para que el Backend de su aplicación funcione correctamente debe agregar las respectivas credenciales del servicio *Databases for MongoDB* en el código. Por esto, siga los pasos que se muestran a continuación:
+Para que el backend de su aplicación funcione correctamente debe agregar las respectivas credenciales del servicio *Databases for MongoDB* en el código. Por esto, siga los pasos que se muestran a continuación:
 1. Ingrese al servicio *Databases for MongoDB* creado. Recuerde que puede ser público o privado.
 
 3. De click en la pestaña *Overview*, vaya a la parte inferior en donde se encuentran los endpoints y en la opción *Quick Start* descargue el certificado TLS.
@@ -51,7 +51,7 @@ Para que el Backend de su aplicación funcione correctamente debe agregar las re
 
 > Nota: Las variables Hostname, Port y Database también las puede encontrar en la pestaña *Overview*, parte inferior en la opción *MongoDB*.
 
-5. Abra el código del Backend en su computador e ingrese a la siguiente ruta: server/conection. En esta ubicación debe encontrar el archivo *mongo.js*. Junto a este archivo agregue el certificado TLS descargado en el ítem 1.
+5. Abra el código del backend en su computador e ingrese a la siguiente ruta: server/conection. En esta ubicación debe encontrar el archivo *mongo.js*. Junto a este archivo agregue el certificado TLS descargado en el ítem 1.
 
 6. Abra el archivo *mongo.js* y complete los siguientes campos con los datos de las variables del ítem 4 dentro de las comillas:
 ```
@@ -59,9 +59,18 @@ const mongoHost1 = process.env.MONGO_HOST1 || 'Valor_Hostname1';
 const mongoHost2 = process.env.MONGO_HOST2 || 'Valor_Hostname2';
 const mongoHost3 = process.env.MONGO_HOST3 || 'Valor_Hostname3';
 const mongoUser = process.env.MONGO_USER || 'Valor_Username';
-const mongoPass = process.env.MONGO_PASS || 'Valor_Passwrod';
+const mongoPass = process.env.MONGO_PASS || 'Valor_Password';
 const mongoDBName = process.env.MONGO_DB_NAME || 'Valor_Database';
 ```
+
+7. Dentro del mismo archivo *mongo.js* coloque el nombre del certificado TLS en la siguiente variables:
+```
+var ca = [require('fs').readFileSync(__dirname + "/nombre_certificado_TLS")];
+```
+
+8. Guarde los cambios realizados al backend de la aplicación. Si desea probar el código abra una ventana de *Windows PowerShell*, vaya a la carpeta que contiene el archivo *package.json* y ejecute el comando *npm run start*. 
+> Nota: esta prueba funciona si trabaja con credenciales de MongoDB público. En caso de trabajar con credenciales de MongoDB privado va a obtener un error por fallas en tiempos de conexión, aún así, esto no afectará el funcionamiento de backend en Kubernetes.
+
 
 ## Paso 3. 
 ### Crear imagen del Backend 📱
