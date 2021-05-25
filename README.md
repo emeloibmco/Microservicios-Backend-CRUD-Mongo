@@ -39,6 +39,7 @@ Para que el Backend de su aplicación funcione correctamente debe agregar las re
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Certificado-TLS.gif"></p>
 
 3. De click en la pestaña *Credenciales de Servicio* y verifique que exista un conjunto de credenciales. Despliegue el conjunto y guarde los valores de Username, Password, 
+<p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Credenciales.gif"></p>
 
 
 
