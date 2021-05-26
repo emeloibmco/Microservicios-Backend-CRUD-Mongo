@@ -53,8 +53,8 @@ Para que el backend de su aplicación funcione correctamente debe agregar las re
 > Nota: Las variables Hostname, Port y Database también las puede encontrar en la pestaña *Overview*, parte inferior en la opción *MongoDB*.
 
 5. Abra el código del backend en su computador e ingrese a la siguiente ruta: server/conection. En esta ubicación debe encontrar el archivo *mongo.js*. Junto a este archivo agregue el certificado TLS descargado en el ítem 1, se debe visualizar de la siguiente manera:
-<p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Archivos.PNG"></p>
->Nota: Recuerde que en su caso el nombre del certificado es distinto.
+<p align="center"><img width="500" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Archivos.PNG"></p>
+> Nota: Recuerde que en su caso el nombre del certificado es distinto.
 
 6. Abra el archivo *mongo.js* y complete los siguientes campos con los datos de las variables del ítem 4 dentro de las comillas:
 ```
