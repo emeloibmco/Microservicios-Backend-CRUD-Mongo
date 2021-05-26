@@ -43,7 +43,7 @@ Para que el backend de su aplicación funcione correctamente debe agregar las re
 3. De click en la pestaña *Credenciales de Servicio* y verifique que exista un conjunto de credenciales. En caso de que no se visualice información al respecto, de click en la opción *Nueva Credencial*.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Credenciales.gif"></p>
 
-4. Despliegue las credenciales del servicio creadas, visualice y copie los valores que aparecen en las siguientes variables:
+4. De click en las credenciales del servicio creadas, visualice y copie los valores que aparecen en las siguientes variables:
 * USERNAME (-u).
 * PASSWORD (-p).
 * Hostname (son 3 direcciones distintas).
