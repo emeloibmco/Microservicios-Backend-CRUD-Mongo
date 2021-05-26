@@ -144,7 +144,7 @@ docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 
 ## Paso 5.
 ### Desplegar imagen del Backend en Kubernetes🚀
-Para desplegar la imagen del backend de la aplicación de Kubernetes, realice lo siguiente:
+Para desplegar la imagen del backend de la aplicación en Kubernetes, realice lo siguiente:
 1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
 ```
 ibmcloud cs clusters
