@@ -24,7 +24,7 @@
 La aplicación utilizada en esta guía la puede encontrar en este repositorio. Para clonar el repositorio en su computador, realice los siguientes pasos:
 
 1. En su computador cree una carpeta a la que pueda acceder con facilidad y asígnele un nombre relacionado con la aplicación.
-2. Abra una ventana de *Windows PowerShell* y muevase con el comando *cd* hasta la carpeta que creó en el paso 1.
+2. Abra una ventana de *Windows PowerShell* y vaya hasta la carpeta que creó en el ítem 1 con el comando *cd* .
 3. Una vez se encuentre dentro de la carpeta creada coloque el siguiente comando para clonar el repositorio:
 ```
 git clone https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo
