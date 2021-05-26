@@ -101,6 +101,8 @@ y coloque en el navegador
 localhost:port/api/customers
 ```
 
+> Nota: En la variable port puede colocar cualquier valor, por ejemplo 8085. En la variable port_dockerfile por defecto coloque 8080, ya que es el puerto establecido para este ejercicio.
+
 
 ## Paso 4. 
 ### Subir imagen del Backend a IBM Cloud Container Registry 📤
