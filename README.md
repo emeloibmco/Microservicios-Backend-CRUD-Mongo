@@ -164,12 +164,12 @@ kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_ima
 >**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
 
 ```
-kubectl expose deployment/<deployment> --type=NodePort --port=8080 -n <namespace>
+kubectl expose deployment/<deployment> --type=NodePort --port=8080
 ```
 
 >**NOTA 2**: Si esta trabajando con VPC (Load Balancer) ejecute el siguiente comando:
 ```
-kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080 -n <namespace>
+kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080
 ```
 En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido e el Dockerfile de la aplicación.
 
