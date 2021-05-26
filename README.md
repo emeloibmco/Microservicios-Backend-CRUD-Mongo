@@ -198,3 +198,5 @@ kubectl get service <deployment>
 Si desea agregar y visualizar datos en el backend en Kubernetes revise el repositorio <a href="https://github.com/emeloibmco/Microservicios-FrontEnd-CRUD-Mongo"> Microservicios-FrontEnd-CRUD-Mongo</a>, en donde se hace la conexión del backend con el frontend de esta misma aplicación y el despliegue del frontend en Kubernetes.
 
 
+## Autores ✒
+Equipo IBM Cloud Tech Sales Colombia.
