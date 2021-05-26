@@ -186,7 +186,7 @@ Para verificar el correcto funcionamiento de su aplicación en Kubernetes realic
 ibmcloud ks workers --cluster <ID_Cluster>
 ```
 
-Para obtener el puerto coloque use el comando:
+Para obtener el puerto use el comando:
 ```
 kubectl get service <deployment>
 ```
