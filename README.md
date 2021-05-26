@@ -155,7 +155,7 @@ ibmcloud cs clusters
 ibmcloud ks cluster config --cluster <cluster_name>
 ```
 
-3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar <deployment> con un nombre para su servicio de despliegue):  
+3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar /<deployment> con un nombre para su servicio de despliegue):  
 ```
 kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
 ```
