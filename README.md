@@ -67,7 +67,7 @@ const mongoPass = process.env.MONGO_PASS || 'Valor_Password';
 const mongoDBName = process.env.MONGO_DB_NAME || 'Valor_Database';
 ```
 
-7. Dentro del mismo archivo *mongo.js* coloque el nombre del certificado TLS en la siguiente variables:
+7. Dentro del mismo archivo *mongo.js* coloque el nombre del certificado TLS en la siguiente variable:
 ```
 var ca = [require('fs').readFileSync(__dirname + "/nombre_certificado_TLS")];
 ```
