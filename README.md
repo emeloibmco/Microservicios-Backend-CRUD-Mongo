@@ -52,7 +52,9 @@ Para que el backend de su aplicación funcione correctamente debe agregar las re
 
 > Nota: Las variables Hostname, Port y Database también las puede encontrar en la pestaña *Overview*, parte inferior en la opción *MongoDB*.
 
-5. Abra el código del backend en su computador e ingrese a la siguiente ruta: server/conection. En esta ubicación debe encontrar el archivo *mongo.js*. Junto a este archivo agregue el certificado TLS descargado en el ítem 1.
+5. Abra el código del backend en su computador e ingrese a la siguiente ruta: server/conection. En esta ubicación debe encontrar el archivo *mongo.js*. Junto a este archivo agregue el certificado TLS descargado en el ítem 1, se debe visualizar de la siguiente manera:
+<p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Archivos.PNG"></p>
+>Nota: Recuerde que en su caso el nombre del certificado es distinto.
 
 6. Abra el archivo *mongo.js* y complete los siguientes campos con los datos de las variables del ítem 4 dentro de las comillas:
 ```
@@ -171,9 +173,12 @@ kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --
 ```
 En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido e el Dockerfile de la aplicación.
 
-5. Por último verifique en que el desployment y el service creados aparecen de forma exitosa en el dashboard de su clúster.
+5. Por último verifique en que el deployment y el service creados aparecen de forma exitosa en el dashboard de su clúster.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Dashboard-Kubernetes.gif"></p>
 
 
 ## Paso 6.
 ### Prueba de Funcionamiento 🏆
 Para verificar el correcto funcionamiento de su aplicación en Kubernetes, diríjase a la pestaña Service/Services dentro del dashboard de Kubernetes, visualice el servicio creado y de click en el external endpoint. Recuerde agregar al final de la URL **/api/customers**; con ello visualizará **[ ]** teniendo en cuenta que aun no tiene datos. Si desea agregar y visualizar datos en el backend en Kubernetes revise el repositorio <a href="https://github.com/emeloibmco/Microservicios-FrontEnd-CRUD-Mongo"> Microservicios-FrontEnd-CRUD-Mongo</a>, en donde se hace la conexión del backend con el frontend de esta misma aplicación y el despliegue del frontend en Kubernetes.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Funcionamiento-Backend.gif"></p>
+
