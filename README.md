@@ -152,7 +152,7 @@ ibmcloud cs clusters
 
 2. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando kubectl de la siguiente manera:
 ```
-ibmcloud ks cluster config –cluster <cluster_name>
+ibmcloud ks cluster config --cluster <cluster_name>
 ```
 
 3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar <deployment> con un nombre para su servicio de despliegue):  
