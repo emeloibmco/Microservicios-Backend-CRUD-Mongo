@@ -176,6 +176,7 @@ kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --
 ```
 En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
 
+
 5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el dashboard de su clúster.
 <p align="center"><img width="1000" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Dashboard-Kubernetes.gif"></p>
 
