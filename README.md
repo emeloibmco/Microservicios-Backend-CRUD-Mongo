@@ -177,7 +177,7 @@ kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --
 En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
 
 
-5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el dashboard de su clúster.
+5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
 <p align="center"><img width="1000" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Dashboard-Kubernetes.gif"></p>
 
 
@@ -195,7 +195,7 @@ Para obtener el puerto use el comando:
 kubectl get service <deployment>
 ```
 
-2. Si trabaja con VPC (Load Balancer), diríjase a la pestaña Service/Services dentro del dashboard de Kubernetes, visualice el servicio creado y de click en el external endpoint. Recuerde agregar al final de la URL **/api/customers**; con ello visualizará **[ ]** teniendo en cuenta que aun no tiene datos. 
+2. Si trabaja con VPC (Load Balancer), diríjase a la pestaña Service/Services dentro del panel de control de Kubernetes, visualice el servicio creado y de click en el external endpoint. Recuerde agregar al final de la URL **/api/customers**; con ello visualizará **[ ]** teniendo en cuenta que aun no tiene datos. 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Funcionamiento-Backend.gif"></p>
 
 Si desea agregar y visualizar datos en el backend en Kubernetes revise el repositorio <a href="https://github.com/emeloibmco/Microservicios-FrontEnd-CRUD-Mongo"> Microservicios-FrontEnd-CRUD-Mongo</a>, en donde se hace la conexión del backend con el frontend de esta misma aplicación y el despliegue del frontend en Kubernetes.
