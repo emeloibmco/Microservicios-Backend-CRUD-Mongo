@@ -179,6 +179,21 @@ En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde coloc
 
 ## Paso 6.
 ### Prueba de Funcionamiento 🏆
-Para verificar el correcto funcionamiento de su aplicación en Kubernetes, diríjase a la pestaña Service/Services dentro del dashboard de Kubernetes, visualice el servicio creado y de click en el external endpoint. Recuerde agregar al final de la URL **/api/customers**; con ello visualizará **[ ]** teniendo en cuenta que aun no tiene datos. Si desea agregar y visualizar datos en el backend en Kubernetes revise el repositorio <a href="https://github.com/emeloibmco/Microservicios-FrontEnd-CRUD-Mongo"> Microservicios-FrontEnd-CRUD-Mongo</a>, en donde se hace la conexión del backend con el frontend de esta misma aplicación y el despliegue del frontend en Kubernetes.
+Para verificar el correcto funcionamiento de su aplicación en Kubernetes realice lo siguiente:
+
+1. Si trabaja con infraestructura clásica su aplicación funcionará si coloca en el navegador **IP_Publica:port/api/customers**. Para obtener la IP Pública coloque el comando:
+```
+ibmcloud ks workers --cluster <ID_Cluster>
+```
+
+Para obtener el puerto coloque use el comando:
+```
+kubectl get service <deployment>
+```
+
+2. Si trabaja con VPC (Load Balancer), diríjase a la pestaña Service/Services dentro del dashboard de Kubernetes, visualice el servicio creado y de click en el external endpoint. Recuerde agregar al final de la URL **/api/customers**; con ello visualizará **[ ]** teniendo en cuenta que aun no tiene datos. 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Funcionamiento-Backend.gif"></p>
+
+Si desea agregar y visualizar datos en el backend en Kubernetes revise el repositorio <a href="https://github.com/emeloibmco/Microservicios-FrontEnd-CRUD-Mongo"> Microservicios-FrontEnd-CRUD-Mongo</a>, en donde se hace la conexión del backend con el frontend de esta misma aplicación y el despliegue del frontend en Kubernetes.
+
 
