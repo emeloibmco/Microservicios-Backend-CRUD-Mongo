@@ -171,7 +171,7 @@ kubectl expose deployment/<deployment> --type=NodePort --port=8080
 ```
 kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080
 ```
-En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido e el Dockerfile de la aplicación.
+En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
 
 5. Por último verifique en que el deployment y el service creados aparecen de forma exitosa en el dashboard de su clúster.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo/blob/main/Imagenes/Dashboard-Kubernetes.gif"></p>
