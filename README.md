@@ -158,7 +158,7 @@ ibmcloud ks cluster config –cluster <cluster_name>
 kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
 ```
   
-4. Por último debe exponer su servicio en Kubernetes, para ello realice lo siguiente.
+4. A continuación, debe exponer su servicio en Kubernetes, para ello realice lo siguiente.
 >**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
 
 ```
@@ -171,8 +171,9 @@ kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --
 ```
 En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido e el Dockerfile de la aplicación.
 
+5. Por último verifique en que el desployment y el service creados aparecen de forma exitosa en el dashboard de su clúster.
 
 
 ## Paso 6.
 ### Prueba de Funcionamiento 🏆
-
+Para verificar el correcto funcionamiento de su aplicación en Kubernetes, diríjase a la pestaña Service/Services dentro del dashboard de Kubernetes, visualice el servicio creado y de click en el external endpoint que se creó con su servicio. Recuerde agregar al final de la URL **/api/customers**; con ello visualizará **[ ]** teniendo en cuenta que aun no tiene datos. Si desea agregar y visualizar datos en el backend en Kubernetes revise el repositorio <a href="https://github.com/emeloibmco/Microservicios-FrontEnd-CRUD-Mongo"> Microservicios-FrontEnd-CRUD-Mongo </a>, en donde se hace la conexión entre del backend con el frontend de esta aplicación y el despliegue del frontend en Kubernetes.
