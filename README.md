@@ -67,6 +67,8 @@ const mongoPass = process.env.MONGO_PASS || 'Valor_Password';
 const mongoDBName = process.env.MONGO_DB_NAME || 'Valor_Database';
 ```
 
+> NOTA: el valor del puerto que se define en sus credenciales del servicio lo debe reemplazar en el archivo mongo.js, en donde aparece el valor 30126. La sección es: // connect to the MongoDB.
+
 7. Dentro del mismo archivo *mongo.js* coloque el nombre del certificado TLS en la siguiente variable:
 ```
 var ca = [require('fs').readFileSync(__dirname + "/nombre_certificado_TLS")];
